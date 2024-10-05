@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Book Library</title>
+  </head>
+  <body>
+    <header>
+      <h1>My Personal Book Library</h1>
+      <nav>
+        <ul>
+          <li><a href="#" id="mainPageLink">Main Page</a></li>
+          <li><a href="#" id="addBookLink">Add Book</a></li>
+          <li><a href="#" id="listBooksLink">List of Books</a></li>
+          <li><a href="#" id="completedBooksLink">Books Completed</a></li>
+          <li><a href="#" id="borrowHistoryLink">Borrowing History</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Page Section -->
+    <section id="mainPage" class="page-section">
+      <h2>Welcome to Your Personal Book Library</h2>
+      <p>Manage your books with ease!</p>
+    </section>
+
+    <!-- Add Book Section -->
+    <section id="addBookSection" class="page-section">
+      <div class="book-input">
+      <h2>Add a New Book</h2>
+      <form id="bookForm">
+        <input type="text" id="title" placeholder="Book Title" required>
+        <input type="text" id="author" placeholder="Author" required>
+        <input type="number" id="year" placeholder="Published Year" required>
+        <input type="number" id="totalPages" placeholder="Total Pages" required>
+        <input type="number" id="pagesRead" placeholder="Pages Read" required>
+        <input type="text" id="borrowedFrom" placeholder="Borrowed From" >
+        <input type="date" id="borrowedDate" placeholder="Borrowed Date">
+        <input type="text" id="borrower" placeholder="Borrower Name">
+        <input type="date" id="borrowerDate" placeholder="Borrower Date">
+        <button type="submit">Add Book</button>
+      </form>
+    </div>
+    </section>
+
+    <!-- List of Books Section -->
+    <section id="listBooksSection" class="page-section">
+      <h2>Books List</h2>
+      <div class="book-list">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Year</th>
+              <th>Total Pages</th>
+              <th>Pages Read</th>
+              <th>Borrowed From</th>
+              <th>Borrowed Date</th>
+              <th>Borrower</th>
+              <th>Borrower Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="bookList"></tbody>
+        </table>
+      </div>
+      </table>
+    </section>
+
+    <!-- Books Completed Section -->
+    <section id="completedBooksSection" class="page-section">
+      <h2>Books Completed</h2>
+      <ul id="completedBooks"></ul>
+    </section>
+
+    <!-- Borrowing History Section -->
+    <section id="borrowHistorySection" class="page-section">
+      <h2>Borrowing History</h2>
+      <ul id="borrowHistory"></ul>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
